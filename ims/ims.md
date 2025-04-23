@@ -5,7 +5,7 @@ wanted to explore the role that an **IP multimedia Subsystem (IMS)** plays on a
 communications network.
 
 However we quickly realize that most educational literature assume a fiscal
-setup with actual hardware and equipment, is it not possible, and even
+setup with actual hardware and equipment. Is it not possible, and even
 preferable, to get a initial understanding and minimal interactions with this
 technologies before diving into expensive purchasing?
 
@@ -20,6 +20,26 @@ both mobile and fixed-access networks. **IMS** enables interoperability between
 different technologies and facilitates the transition from traditional
 **circuit-switched (CS)** networks to fully **packet-based
 (IP)** networks.
+
+## Key components
+
+![**IMS** Architecture diagram](./assets/ims-arch.png)
+
+- **Call Session Control Function (CSCF)**
+
+    Call control and session management. Composed of:
+
+    - **Proxy-CSCF (P-CSCF):** Entry point to the **IMS** network.
+
+    - **Interrogating-CSCF (I-CSCF):** Routes **SIP** request towards the
+      S-CSCF and assigns it to a user performing registration.
+
+    - **Serving-CSCF (S-CSCF):** Session control services, including acting as
+      a _registrar_.
+
+- **Home Subscriber Server (HSS)**
+
+    Database containing user and subscription related information.
 
 ## Protocols
 
@@ -48,29 +68,6 @@ authorization information for **SIP-based** **IP multimedia services**.
 Furthermore, it provides extra functions, such as the ability to download or
 receive updated user profiles, or rudimentary routing functions that can assist
 a **SIP server** in finding another one allocated to the user.[^diameter-sip]
-
-## Key components
-
-### Call Session Control Function (CSCF)
-
-Call control and session management. Composed of:
-
-- **Proxy-CSCF (P-CSCF)**
-    
-    First contact point, behaves like a Proxy.
-
-- **Interrogating-CSCF (I-CSCF)**
-
-    Routes **SIP** request towards the S-CSCF and assigns it to a user
-    performing registration.
-
-- **Serving-CSCF (S-CSCF)**
-
-    Session control services, behaves as  a _registrar_.
-
-### Home Subscriber Server (HSS)
-
-Database containing user and subscription related information.
 
 ## Making a call
 
