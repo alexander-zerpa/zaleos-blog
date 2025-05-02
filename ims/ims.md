@@ -134,11 +134,11 @@ pjsua \
 
 ## Simulate a 4G network
 
-We can also try to more fitfully recreate a real deployment by using the 
+We can also try to more fatefully recreate a real deployment by using the 
 [**docker open5gs** repo][docker_open5gs] as a starting point. One of the 
 included setup describes a 4G deployment to which a simulated **UE** can 
-connect to. However, as is there is no way to generate **SIP** traffic from 
-that device to the **IMS**, so to fix that we'll need to use the `srslte` image 
+connect to. However, there is no way to generate **SIP** traffic from 
+that device to the **IMS**, to fix that we'll need to use the `srslte` image 
 as a base on top of which we'll build our **PJSUA** clients and route their 
 traffic trough the **TUN** interface that encapsulates and simulates the radial 
 network.
