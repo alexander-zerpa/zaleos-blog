@@ -25,6 +25,8 @@ different technologies and facilitates the transition from traditional
 
 ![**IMS** Architecture diagram](./assets/ims-arch.png)
 
+The core **IMS** is composed of various elements, most important of which are:
+
 - **Call Session Control Function (CSCF)**
 
     Call control and session management. Composed of:
@@ -140,7 +142,7 @@ included setup describes a 4G deployment to which a simulated **UE** can
 connect to. However, there is no way to generate **SIP** traffic from 
 that device to the **IMS**, to fix that we'll need to use the `srslte` image 
 as a base on top of which we'll build our **PJSUA** clients and route their 
-traffic trough the **TUN** interface that encapsulates and simulates the radial 
+traffic trough the tunnel interface that encapsulates and simulates the radio
 network.
 
 ## Conclusion
@@ -148,7 +150,7 @@ network.
 We have demonstrated that for simple setups focusing on the core
 functionalities of **IMS** it is totally possible to use simulated devices and
 local setups without extra hardware, there's also promise in the simulation of
-radial networks with tools like [**ZeroMQ**][zmq] and [**srsRAN**][srsran] for
+radio networks with tools like [**ZeroMQ**][zmq] and [**srsRAN**][srsran] for
 more complete and in depth setups.
 
 <!-- links -->
